@@ -1,0 +1,22 @@
+into terminal
+
+1. получаем образ PostgreSQL из официального репозитория Docker Hub:
+
+docker pull postgres
+
+
+2. создаем и запускаем контейнер с помощью следующей команды:
+
+docker run --name <имя_контейнера> -e POSTGRES_PASSWORD=<пароль> -p <хост_порт>:5432 -d postgres
+
+sudo docker run --name my_postgres -e POSTGRES_PASSWORD=1111 -p 5432:5432 -d postgres
+
+
+список всех контейнеров
+sudo docker ps -a
+
+удаляем контейнер и потом заново его создаем через ту команду ран
+sudo docker rm my_postgres
+
+
+pip instal flask[async] а не из доступных библиотек Flask
